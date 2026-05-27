@@ -3,7 +3,7 @@
 **love kk - biz ops**
 
 > 针对大组织、零资源起步、需要从 0 搭系统、推全国落地的业务管理人。
-> 方法论来自真实项目实战：AUM 净增 138 亿、全国落地 300+ 网点、新人商机效率提升 33%。
+> 方法论来自大型企业多年 0→1 项目实战，经过真实项目验证。
 
 [English](#english) | 中文
 
@@ -103,7 +103,7 @@ MIT
 **love kk - biz ops**
 
 > For people in large organizations who need to build business systems from scratch and drive nationwide execution — with zero authority and limited resources.
-> Methodology proven in real projects: +¥13.8B AUM, 300+ branch rollouts, 33% efficiency improvement for new hires.
+> Methodology proven in real 0→1 projects across large enterprises.
 
 ---
 
