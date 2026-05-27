@@ -5,6 +5,12 @@
 > 针对大组织、零资源起步、需要从 0 搭系统、推全国落地的业务管理人。
 > 方法论来自大型企业多年 0→1 项目实战，经过真实项目验证。
 
+<p align="center">
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
+  <img src="https://img.shields.io/github/stars/kellyvai/love-kk-biz-ops?style=social" alt="Stars">
+  <img src="https://img.shields.io/badge/Claude%20Code-Skill-8A2BE2" alt="Claude Code Skill">
+</p>
+
 [English](#english) | 中文
 
 ---
@@ -94,6 +100,14 @@ MIT
 
 ---
 
+## 支持这个 Skill ⭐
+
+觉得有用的话，右上角点个 Star，让更多人看到 💪
+
+有建议或问题 → [提 Issue](https://github.com/kellyvai/love-kk-biz-ops/issues/new/choose)
+
+---
+
 <a name="english"></a>
 
 # Biz Ops Advisor · Enterprise Business Operations Consultant
@@ -139,3 +153,11 @@ D. Execution Push       →  Diagnose where you're stuck, get a concrete action 
 ## License
 
 MIT
+
+---
+
+## Support ⭐
+
+Found it useful? Hit the Star button to help others discover it.
+
+Have feedback? → [Open an Issue](https://github.com/kellyvai/love-kk-biz-ops/issues/new/choose)
