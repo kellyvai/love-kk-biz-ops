@@ -12,12 +12,10 @@
 ## 安装
 
 ```bash
-git clone https://github.com/kellyvai/love-kk-biz-ops.git \
-  ~/.claude/skills/biz-ops
-
-# 启动
-/biz-ops
+npx skills add kellyvai/love-kk-biz-ops@biz-ops
 ```
+
+启动：`/biz-ops`
 
 ---
 
@@ -110,11 +108,10 @@ MIT
 ## Installation
 
 ```bash
-git clone https://github.com/kellyvai/love-kk-biz-ops.git \
-  ~/.claude/skills/biz-ops
-
-/biz-ops
+npx skills add kellyvai/love-kk-biz-ops@biz-ops
 ```
+
+Launch: `/biz-ops`
 
 ---
 
