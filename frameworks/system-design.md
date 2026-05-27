@@ -1,83 +1,52 @@
-# 系统设计框架
+# 系统设计框架 / System Design Framework
 
-> 在 B 阶段（产品 / 系统设计）调用。
-> 核心逻辑：不是拿到一个系统来适配流程，而是反过来——先定义经营打法，再定义系统该长什么样。
-
----
-
-## 思维起点：先想清楚经营逻辑，再定义系统
-
-错误顺序：先问「系统能做什么」，再想「我要怎么用」
-正确顺序：先问「我要怎么经营客户 / 打渠道 / 做动作」，再问「系统需要支撑哪些动作」
+> B 入口（系统/产品设计）调用。
+> Used in Entry B (System/Product Design). Internal reference for system requirements analysis.
 
 ---
 
-## 系统需求分析清单
+## 核心逻辑 / Core Logic
 
-在设计任何系统或产品功能之前，先把这四个维度想清楚：
-
-| 分析维度 | 关键问题 |
-|----------|----------|
-| 功能与系统需求 | 我需要哪些功能？企业里有没有现成的可以复用的？ |
-| 角色与责任边界 | 每个系统功能对应什么动作？谁触发？谁执行？谁追踪？谁复盘？ |
-| 人机协作模式 | 人做的动作和系统做的动作怎么区分？现在是怎么样的，我要优化成什么样的？ |
-| 扩展复制能力 | 这套系统能不能支撑未来其他场景的复制？ |
+**错误顺序 / Wrong order**：先问「系统能做什么」/ "What can the system do?"
+**正确顺序 / Right order**：先问「我要怎么经营客户」/ "How do I want to operate?" → then define what the system needs to support.
 
 ---
 
-## 系统链路设计的两个视角
+## 四维分析 / Four Dimensions
 
-**视角一：用户生命周期链路**
-```
-获客 → 激活 → 留存 → 复购
-每个阶段：客户状态是什么？对应的系统动作是什么？怎么流转到下一阶段？
-```
-
-**视角二：用户服务流程链路**
-```
-线上进入 → 线下到店 → 接受服务 → 离店跟进
-每一步：系统在哪？人在哪？数据在哪？是谁触发的？谁判断的？有没有漏？
-```
-
-只有把「人 / 系统 / 数据」三个角色在每个节点上拆清楚，系统才真正在支撑策略落地。
+| 维度 / Dimension | 关键问题 / Key Questions |
+|-----------------|------------------------|
+| 功能需求 / Functional needs | 需要什么功能？有现成的可以复用吗？ |
+| 角色边界 / Role boundaries | 谁触发？谁执行？谁追踪？谁复盘？ |
+| 人机协作 / Human-system split | 人做什么，系统做什么？现在vs目标？ |
+| 扩展能力 / Scalability | 这套能否支撑未来场景复制？ |
 
 ---
 
-## 数据埋点前置原则
+## 两个视角 / Two Lenses
 
-⚠️ **这些问题要在系统设计阶段就想清楚，不是上线后再补**
+| 视角 / Lens | 链路 / Flow |
+|------------|------------|
+| 用户生命周期 / User lifecycle | 获客→激活→留存→复购 / Acquisition→Activation→Retention→Revenue |
+| 用户服务流程 / Service journey | 线上进入→线下到店→接受服务→离店跟进 / Online→Store→Service→Follow-up |
 
-- 我这套经营逻辑里，必须监控的关键节点是什么？
-- 哪个动作必须记录？哪些字段必须结构化？
-- 这些数据未来用来做什么决策？谁看？什么时候看？
-- 数据怎么回到人手上产生作用，而不是存在数据库里发霉？
+### ⚠️ 高频陷阱 / Common Pitfalls
 
----
-
-## 高频踩坑提醒
-
-**C 端产品不是普通 APP 的逻辑**
-有实体门店 + 销售队伍 + 线下场景的产品，真正要思考的不是「功能做得漂不漂亮」，而是：
-> 怎么借助一线队伍和线下场景，把功能变成客户能感知到的价值？
-
-**不是用产品改造业务，是用产品赋能业务**
-赋能 = 让原有的逻辑更容易做、更快做、成本更低。
-不是 = 让业务团队学一套全新流程。
-
-**不要「自以为」做一个功能是好用的**
-你不是一线在打仗的人，你以为的用户路径可能根本不存在。
-必须：去跑完整流程、做调研、跟一线人一起走完每一个环节。
+1. **C 端产品不是普通 APP** — 有实体门店 + 销售队伍的产品，核心是帮一线更容易打仗
+   Consumer product with physical stores + sales team: the core is empowering frontline, not fancy UI
+2. **不「以为」用户需要什么** — 去跑完整的流程、做调研，别猜
+   Don't guess user needs — go through the full process yourself
+3. **数据埋点前置** — 上线前想清楚哪些节点必须记录、用来做什么决策
+   Plan your data tracking before building, not after launch
 
 ---
 
-## 小K的问题清单（系统设计阶段）
+## 小K的问题清单 / K's Question Flow (B Entry)
 
-小K每问一个，等用户回答再问下一个：
+1. 要支撑什么经营动作？（先说经营逻辑，不是功能）/ What business operation are you supporting? (Logic first, not features)
+2. 用户路径是什么？线上和线下各在哪？/ User journey: online vs offline touchpoints?
+3. 谁触发？谁执行？谁追踪？/ Who triggers, executes, and tracks each step?
+4. 哪些节点必须埋数据？/ Which nodes need data tracking?
+5. 有没有跑过真实业务流程？一线反馈是什么？/ Have you shadowed the real process? What did frontline say?
 
-1. 你要支撑的经营动作是什么？（先说经营逻辑，不是先说功能）
-2. 用户路径是什么？线上和线下各在哪里？
-3. 谁触发？谁执行？谁追踪？责任边界有没有划清楚？
-4. 这套系统里，哪些节点是必须埋数据的？
-5. 有没有去跑过真实的业务流程？一线反馈是什么？
-
-用户回答完，小K输出系统需求分析文档草稿。
+输出：系统需求分析文档草稿 / Output: system requirements draft

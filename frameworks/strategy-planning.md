@@ -1,91 +1,56 @@
-# 业务规划框架
+# 业务规划框架 / Strategy Planning Framework
 
-> 在 A 阶段（新项目立项）调用。
-> 小K按此框架引导用户把模糊方向变成可执行的策略方案。
-
----
-
-## 核心问题：立项必须回答清楚的五件事
-
-在动笔写方案之前，先逼自己回答这五个问题。任何一个答不上来，方案都站不住脚：
-
-1. **为什么做这件事？** — 价值逻辑是什么，做与不做的差别在哪里
-2. **证据是什么？** — 数据、市场信号、客户反馈，不能靠拍脑袋
-3. **具体怎么做？** — 打法路径，不是"我们要提升用户体验"，是"第一步做什么、第二步做什么"
-4. **节奏是什么？** — 每个阶段拆解清楚，谁在什么时间点做什么
-5. **需要什么资源？** — 预算、人力、系统支持、跨部门配合，提前算清楚
+> A 入口（新项目立项）调用。小K内部参考，用于判断立项逻辑和生成立项报告。
+> Used in Entry A (New Project). Internal reference for evaluating project logic and generating proposals.
 
 ---
 
-## 三个阶段的分析重点
+## 五问框架 / Five Questions
 
-### 前期（立项阶段）：这件事值不值得做
+任何方案开始前，先回答这五个问题。答不上来，方案站不住脚。
 
-核心任务：回答方向判断，能不能上。
+Before writing any proposal, answer these 5. If you can't answer one, the proposal won't hold.
 
-需要分析的问题：
-- 市场有多大？客户需求是否真实存在（不是你以为存在）？
-- 竞争对手怎么打的？我们跟他们的差异在哪？
-- 行业趋势怎么走？这件事现在做是不是窗口期？
-
-交付成果：立项分析报告 — 一份能让决策层说"上"或"不上"的文件，不是展示你做了多少分析
-
----
-
-### 中期（推进阶段）：怎么推、策略跑不跑得通
-
-核心任务：把方向变成具体的季度作战计划。
-
-需要搞清楚的：
-- 全年每个季度干什么？里程碑是什么？
-- 资源怎么分配？钱和人优先放在哪里？
-- 每个阶段的成功标准是什么？怎么判断跑通了？
-- MVP 是什么？先验证哪个最关键的假设？
-
-交付成果：策略方案 + 资源计划 + 至少一个 MVP 验证闭环的成功案例
+1. **为什么做？** / **Why?** — 价值逻辑，做与不做的差别 / The value case
+2. **证据是什么？** / **Evidence?** — 数据、市场信号、客户反馈 / Data, signals, customer feedback
+3. **怎么做？** / **How?** — 打法路径 / Concrete approach, step by step
+4. **节奏？** / **Timeline?** — 每个阶段拆解 / Milestones per phase
+5. **要什么资源？** / **Resources?** — 预算、人力、系统、跨部门 / Budget, headcount, systems, cross-team support
 
 ---
 
-### 后期（执行优化阶段）：效果追踪和策略迭代
+## 三阶段 / Three Phases
 
-核心任务：不是写复盘报告，是找出哪里可以复制、哪里需要调整。
-
-要回答的问题：
-- 客户是否如预期转化了？哪个环节漏了？
-- 队伍有没有执行到位？是动作问题还是策略问题？
-- 什么可以横向复制到其他城市 / 场景？
-
-交付成果：阶段复盘报告 + 策略迭代方案
+| 阶段 / Phase | 核心 / Focus | 交付 / Deliverable |
+|-------------|-------------|-------------------|
+| 前期 / Early: 值不值得做 | 市场、竞争、时机判断 | 立项分析报告 / Project assessment report |
+| 中期 / Mid: 怎么推 | 季度作战计划 + 资源分配 + MVP | 策略方案 + 资源计划 / Strategy + resource plan |
+| 后期 / Execution: 效果迭代 | 哪些可复制、哪些要调整 | 复盘 + 迭代方案 / Review + iteration plan |
 
 ---
 
-## 策略分析的四类支撑来源
+## 策略支撑四来源 / Four Sources of Strategic Evidence
 
-⚠️ **不能自己 YY，每一步策略背后必须有明确支撑**
+| 来源 / Source | 用法 / How to Use |
+|-------------|------------------|
+| 一线案例 / Frontline cases | 去访谈，别猜 / Go talk to them |
+| 客户调研 / Customer research | 深访，验证假设 / Deep interviews |
+| 行业报告 / Industry reports | 判断窗口期 / Validate timing |
+| 竞品分析 / Competitor analysis | 找薄弱环节 / Find gaps |
 
-| 支撑来源 | 核心价值 | 怎么用 |
-|----------|----------|--------|
-| 一线队伍实际案例 | 了解前线真实怎么干活 | 直接去访谈，识别执行难点 |
-| 客户访谈和数据调研 | 用真实反馈支撑判断 | 用户深访，不要猜客户需求 |
-| 行业分析报告 | 判断窗口期和机会点 | 第三方报告 + 跨行业参考 |
-| 竞争对手深度分析 | 找对手薄弱环节 | 看别人怎么打、资源怎么分配 |
-
-**关键原则：你不是一个人搞战略，你是调动所有人的智慧。**
-- 产品经理 → 让他输出策略产品支撑逻辑和执行节奏
-- 数据团队 → 让他帮验证策略判断，但你自己要掌握解释权
-- 一线业务 → 让他告诉你真实落地难度和注意细节
-- 有经验的同事 → 让他告诉你坑在哪里
+**关键原则 / Key principle**：你不是一个人搞战略，是在调动所有人的智慧。
+You're not doing strategy alone — you're orchestrating collective intelligence.
 
 ---
 
-## 小K的问题清单（立项阶段逐一对齐）
+## 小K的问题清单 / K's Question Flow (A Entry)
 
-小K每问一个，等用户回答再问下一个：
+Ask one at a time, wait for answer:
 
-1. 这件事要解决什么问题？现在不做的代价是什么？
-2. 支撑这个判断的数据或案例是什么？
-3. 第一步做什么？MVP 验证的是哪个关键假设？
-4. 需要哪些资源，现在有哪些，缺什么？
-5. 全年节奏是什么？每个季度的里程碑是什么？
+1. 解决什么问题？不做代价是什么？/ What problem does this solve? What's the cost of not doing it?
+2. 支撑这个判断的案例或数据是什么？/ What evidence supports this?
+3. 第一步做什么？MVP 验证哪个关键假设？/ What's the MVP hypothesis to validate?
+4. 需要什么资源？现在有什么？缺什么？/ Resources: have vs need?
+5. 全年节奏？/ Annual timeline with quarterly milestones?
 
-用户回答完，小K生成立项分析报告草稿，发给用户确认。
+用户回答完 → 生成**立项分析报告草稿** / After all 5 → generate draft proposal.

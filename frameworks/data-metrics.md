@@ -1,103 +1,66 @@
-# 数据指标体系框架
+# 数据指标体系框架 / Data Metrics Framework
 
-> 在 C 阶段（数据指标体系设计）调用。
-> 核心原则：数据是辅助验证判断的，不是帮下结论的。业务必须掌握数据解释权。
-
----
-
-## 横向维度：至少覆盖三个视角
-
-### 视角一：项目维度 — 形成完整指标闭环
-
-用 AARRR 漏斗判断大盘健康度：
-
-```
-获客（Acquisition）→ 激活（Activation）→ 留存（Retention）→ 推荐（Referral）→ 转化（Revenue）
-```
-
-核心作用：
-- 现在卡在哪个阶段？
-- 是流量不够？留存掉得快？还是最后转化出问题？
-- 这是判断大盘和项目进度的决策工具，不是展示板
+> C 入口（数据指标体系）调用。
+> Used in Entry C (Data Metrics). Internal reference for building a 3-layer KPI system.
 
 ---
 
-### 视角二：渠道维度 — 下钻数据表现分析
+## 三层视角 / Three Lenses
 
-同样的资源投入，不同渠道表现差异很大。要能拆开看：
+### 视角一 / Lens 1: 项目维度 / Project Level
 
-| 渠道类型 | 典型特征 | 资源配置启示 |
-|----------|----------|-------------|
-| 社群 | 活跃但成交低 | 适合品牌曝光和用户教育，不适合直接转化 |
-| App | 注册高但留存差 | 需要优化用户体验和内容留存 |
-| 线下 | 到店转化好但成本高 | 精准投放，提高获客质量 |
+用 AARRR 漏斗判断大盘健康度 / Use AARRR to assess pipeline health:
+获客→激活→留存→推荐→转化 / Acquisition→Activation→Retention→Referral→Revenue
 
-关键指标：响应率、客户质量、次日留存、活跃度、偏好分布
+关键问题 / Key question: 现在卡在哪个阶段？/ Which stage is the bottleneck?
 
----
+### 视角二 / Lens 2: 渠道维度 / Channel Level
 
-### 视角三：推动维度 — 多层级数据体系
+同资源投不同渠道表现差异很大 / Same resources, very different results by channel:
 
-每个角色看他该看的数据，用他该用的数据做判断：
+| 渠道 / Channel | 特征 / Trait | 启示 / Insight |
+|---------------|-------------|---------------|
+| 社群 / Community | 活跃但成交低 | 适合品牌曝光 / Brand awareness play |
+| App | 注册高留存差 | 优化用户体验 / Improve UX retention |
+| 线下 / Offline | 转化好成本高 | 精准投放 / Targeted, quality over volume |
 
-| 层级 | 关注角色 | 核心指标 | 决策用途 |
-|------|----------|----------|----------|
-| 总部 / 管理层 | 高管 | KPI 完成率、结构变化、ROI | 战略执行情况 |
-| 城市 / 区域 | 区域负责人 | 客群转化率、活动触达率、达标率 | 区域目标拆解 |
-| 门店管理 | 店长 | 员工行为量、客户跟进进度、执行情况 | 队伍管理 |
-| 一线员工 | 销售 / 服务人员 | 客户画像、状态、历史动作、推荐动作 | 具体执行 |
+### 视角三 / Lens 3: 推动维度 / Execution Level
 
----
-
-## 纵向维度：指标必须能往下追、横向拉通
-
-**你不能光看总 KPI，要能拆下去：**
-
-- **二级指标**：结果是靠哪个客层、哪个渠道、哪个产品拉的？结构变化是什么？
-- **三级指标**：动作和效果对不对得上？哪种活动、哪类行为带来的？
-- **同级细分**：哪个城市效果更好？哪里是热点？哪里是拖点？
-
-做不到这些拆解，就没法快速识别问题、发现爆点、复制打法。
+| 层级 / Level | 关注 / Focus | 核心指标 / Core Metrics | 决策用途 / Purpose |
+|-------------|-------------|----------------------|------------------|
+| 总部 / HQ | 高管 | KPI 完成率、ROI | 战略执行 / Strategy tracking |
+| 区域 / Region | 区域负责人 | 转化率、触达率 | 目标拆解 / Goal breakdown |
+| 门店 / Store | 店长 | 员工行为量 | 队伍管理 / Team mgmt |
+| 一线 / Frontline | 员工 | 客户状态、推荐动作 | 具体执行 / Day-to-day action |
 
 ---
 
-## 分析要有节奏，嵌在每个业务动作里
+## 纵向分析 / Vertical Analysis
 
-| 阶段 | 分析重点 | 核心问题 |
-|------|----------|----------|
-| 立项阶段 | 项目值不值得做 | 有没有做头？哪个客群更有潜力？ |
-| 定目标阶段 | 结合资源设合理目标 | 历史基准是什么？团队能力上限在哪？ |
-| 推进过程中 | 过程指标，不是结果指标 | 哪个环节掉队了？策略要不要调？ |
-| 收尾复盘 | 什么值得复制，什么是一次性效果 | ROI 是多少？横向复制可行吗？ |
+指标必须能往下追 / Metrics must be drillable:
+- **二级**：哪个客层/渠道/产品拉的？/ Which segment/channel/product?
+- **三级**：动作和效果对不对得上？/ Does action correlate with outcome?
+- **同级细分**：哪个城市更好？/ Which city outperforms?
 
 ---
 
-## 高频陷阱：数据解释权不能丢
+## ⚠️ 关键陷阱：数据解释权 / Key Trap: Data Narrative Ownership
 
-**典型案例：App 下载转化率的误读**
+**典型案例 / Classic case**：
+App 下载数据说「下载 App 的客户转化率更高」→ 实际上是因为好客户才被引导下载
+> "App downloaders convert better" sounds compelling until you realize it's because high-value customers were told to download.
 
-> 数据模型归因说「下载 App 的客户后续转化率更高」，于是建议推动队伍让客户下载 App。
-> 但实际情况是：内部本来就要求员工对高价值客户主动推荐 App，所以「转化率高」不是因为 App 好，而是因为本来就是好客户才被引导下载。
-
-**结论：不掌握数据解释权，就没有策略主导权。**
-
-业务必须主导：
-- 数据使用场景
-- 指标定义口径（你说了算，不是分析师说了算）
-- 分析节奏安排
-
-数据团队是协同方，不是指挥官。
+**结论 / Rule**: 不掌握数据解释权，就没有策略主导权。
+If you don't own the data narrative, you don't own the strategy.
 
 ---
 
-## 小K的问题清单（数据指标体系设计）
+## 小K的问题清单 / K's Question Flow (C Entry)
 
-小K每问一个，等用户回答再问下一个：
+1. 最核心要监控的 3 个结果指标？/ Top 3 outcome metrics?
+2. 每个结果指标对应的过程指标？/ Leading indicators for each?
+3. 数据你自己能解释清楚吗？有没有「数据说一回事、业务另一回事」？/ Do you trust your data narrative? Any mismatches?
+4. 不同层级分别看什么？/ What does each level need to see?
+5. 数据反馈机制是什么？谁看、多久看、看完做什么？/ Feedback loop: who, when, action?
 
-1. 现在这个项目 / 业务，最核心要监控的 3 个结果指标是什么？
-2. 这 3 个结果指标背后，各自对应什么过程指标？
-3. 现在的数据，你自己能解释清楚吗？有没有「数据说一回事，业务实际另一回事」的情况？
-4. 不同层级的人（总部 / 城市 / 门店）分别需要看什么数据？
-5. 数据反馈到业务的机制是什么？谁看？多久看一次？看完之后谁做什么动作？
-
-用户回答完，小K生成数据指标体系框架草稿。
+输出：三层指标体系草稿 / Output: 3-layer KPI framework draft

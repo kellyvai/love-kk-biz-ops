@@ -9,6 +9,7 @@
   <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
   <img src="https://img.shields.io/github/stars/kellyvai/love-kk-biz-ops?style=social" alt="Stars">
   <img src="https://img.shields.io/badge/Claude%20Code-Skill-8A2BE2" alt="Claude Code Skill">
+  <img src="https://img.shields.io/badge/lang-中文%20%7C%20English-yellow" alt="Bilingual">
 </p>
 
 [English](#english) | 中文
@@ -37,6 +38,8 @@ npx skills add kellyvai/love-kk-biz-ops@biz-ops
 
 这个 Skill 把实战中真正有用的方法论提炼出来——不是常识文章，是可以直接用的框架。
 
+支持中英文双语。说「English」切换英文模式。
+
 ---
 
 ## 四个入口
@@ -46,6 +49,42 @@ A. 新项目立项  →  把模糊方向变成可执行的立项方案
 B. 系统设计    →  先定经营逻辑，再定系统需求，不走弯路
 C. 数据指标    →  搭三层指标体系，掌握数据解释权
 D. 推动落地    →  诊断卡在哪一层，给具体推动方案
+```
+
+---
+
+## 用起来长什么样
+
+**场景**：你在做新项目立项，拿不到资源。
+
+```
+你 → /biz-ops
+
+小K → 主人好～小K来了！✦
+       说说现在的情况，小K来判断从哪里切入。
+
+       A. 新项目     B. 系统 / 产品
+       C. 数据指标   D. 推不动
+
+你 → 我想推一个新项目，但领导不批资源
+
+小K → 那我们先走 D 入口——看看卡在哪一层。
+       说详细点：领导不批的理由是什么？
+       是没有听到价值逻辑，还是缺数据支撑？
+
+       （等主人说完后，小K直接输出推动方案）
+```
+
+**场景**：你在搭数据指标体系。
+
+```
+你 → 我需要一套数据体系来判断业务健康度
+
+小K → 好，C 入口。
+       先问第一个：最核心要监控的 3 个结果指标是什么？
+       
+       （等回答后依次追问 2-5）
+       ...对话结束 → 小K输出三层指标体系草稿
 ```
 
 ---
@@ -73,13 +112,13 @@ D. 推动落地    →  诊断卡在哪一层，给具体推动方案
 
 ```
 biz-ops/
-├── SKILL.md                         # 主流程编排
+├── SKILL.md                         # 主流程编排（中英双语）
 ├── README.md                        # 本文件
 └── frameworks/
-    ├── strategy-planning.md         # 业务规划框架（A 入口）
-    ├── system-design.md             # 系统设计框架（B 入口）
-    ├── data-metrics.md              # 数据指标体系（C 入口）
-    └── stakeholder-push.md          # 协同推动框架（D 入口）
+    ├── strategy-planning.md         # 业务规划框架（中英双语）
+    ├── system-design.md             # 系统设计框架（中英双语）
+    ├── data-metrics.md              # 数据指标体系（中英双语）
+    └── stakeholder-push.md          # 协同推动框架（中英双语）
 ```
 
 ---
@@ -91,6 +130,7 @@ biz-ops/
 - 需要跨部门协同推动，但没有权限
 - 要给领导写立项报告，不知道逻辑怎么搭
 - 数据看不明白，不知道怎么建指标体系
+- **English speakers working in Chinese enterprises or global orgs with complex operations**
 
 ---
 
@@ -140,6 +180,39 @@ D. Execution Push       →  Diagnose where you're stuck, get a concrete action 
 
 ---
 
+## What It Looks Like
+
+**You're stuck getting leadership approval for a new project.**
+
+```
+You → /biz-ops
+
+K → Hi, I'm K. Tell me what's going on and I'll figure out where to start.
+
+    A. New Project    B. System / Product
+    C. Data Metrics   D. Stuck
+
+You → I need to launch a new initiative but my boss won't approve the budget
+
+K → Let's go with D. Can you tell me more about their objection?
+    Is it about the value case, or do they want more data?
+    
+    (After you respond → K generates a specific push plan)
+```
+
+**You need a metrics framework.**
+
+```
+You → I need to build a KPI system for my business unit
+
+K → Entry C. First question:
+    What are the top 3 outcome metrics you need to track?
+    
+    (After you answer → K walks through all 5 questions → outputs a 3-layer metrics draft)
+```
+
+---
+
 ## Core Principles
 
 1. No gut-feel strategy — every decision needs data, case studies, or frontline feedback
@@ -147,6 +220,21 @@ D. Execution Push       →  Diagnose where you're stuck, get a concrete action 
 3. Own your data interpretation — analytics team supports, doesn't lead
 4. Execution push is a transaction — figure out what each stakeholder gets
 5. Pilot first — get results with willing teams, then use those results to pull others in
+
+---
+
+## File Structure
+
+```
+biz-ops/
+├── SKILL.md                         # Main workflow (bilingual)
+├── README.md                        # This file
+└── frameworks/
+    ├── strategy-planning.md         # Strategy planning framework (bilingual)
+    ├── system-design.md             # System design framework (bilingual)
+    ├── data-metrics.md              # Data metrics framework (bilingual)
+    └── stakeholder-push.md          # Stakeholder push framework (bilingual)
+```
 
 ---
 
